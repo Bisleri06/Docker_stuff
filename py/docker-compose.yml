@@ -1,0 +1,15 @@
+services:
+  main:
+    image: python:3-slim
+    command: sh -c "pip install flask && python test.py"
+    ports:
+      - 5000:5000
+    working_dir: /folder
+    volumes:
+      - ./:/folder  #bind mount
+    environment:
+      - SEKRUT=THISWORK
+  
+  testing:
+    image: nicolaka/netshoot
+    tty: true   #keeps this container running, normal bash or sh exits immediately

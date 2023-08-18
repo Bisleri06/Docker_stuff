@@ -1,0 +1,40 @@
+body {
+    background-color: #4f4f4f;
+    margin-top: 50px;
+    font-family: 'Lato';
+}
+
+.item {
+    background-color: black;
+    color:white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 1em #ccc;
+    transition: all .2s ease-in-out;
+}
+
+.item:hover {
+    box-shadow: 0 0 1em #aaa;
+}
+
+.item.completed {
+    text-decoration: line-through;
+}
+
+.toggles {
+    color: white;
+}
+
+.name {
+    padding-top: 3px;
+}
+
+.remove {
+    padding-left: 0;
+}
+
+button:focus {
+    border: 1px solid #333;
+}

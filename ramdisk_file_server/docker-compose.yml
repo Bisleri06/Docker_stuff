@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - C:\Users\USER\Desktop\data:/data
+    tmpfs:  #the ramdisk
+      - /playground:size=1G
+  
+  frontend:
+    build: ./frontend
+    ports:
+    - 3000:3000
+  
+  testing:
+    image: nicolaka/netshoot
+    tty: true
